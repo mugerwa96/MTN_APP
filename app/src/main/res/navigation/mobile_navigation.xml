@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.mugerwa.mtnmomo.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.mugerwa.mtnmomo.ProfileFragment"
+        android:label="profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_services"
+            app:destination="@id/nav_services" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_subscriptions"
+        android:name="com.mugerwa.mtnmomo.SubscriptionsFragment"
+        android:label="Subscription"
+        tools:layout="@layout/fragment_subscriptions" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_services"
+            app:destination="@id/nav_services" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_services"
+        android:name="com.mugerwa.mtnmomo.ServicesFragment"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_services" >
+        <action
+            android:id="@+id/action_nav_services_to_nav_senkyu"
+            app:destination="@id/nav_senkyu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_senkyu"
+        android:name="com.mugerwa.mtnmomo.SenkyuFragment"
+        android:label="@string/mtn_senkyu"
+        tools:layout="@layout/fragment_senkyu" />
+
+
+</navigation>
